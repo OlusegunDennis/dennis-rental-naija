@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dennis-rental-naija.netlify.app
+
+# Sitemaps
+Sitemap: https://dennis-rental-naija.netlify.app/sitemap.xml
