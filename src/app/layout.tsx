@@ -1,8 +1,15 @@
+// app/layout.tsx
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+import ClientBody from '../app/real-estate/ClientBody';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'Dennis Rental Naija',
@@ -29,18 +36,24 @@ export default function RootLayout({
           name="google-site-verification"
           content="s4A6w-GoowIVExLiyPQ7mxq3L4FKM9l3SMNQKkRj3rQ"
         />
-        <link rel="canonical" href="https://dennis-rental-naija.netlify.app" />
+        <link
+          rel="canonical"
+          href="https://dennis-rental-naija.netlify.app"
+        />
+      </head>
+      <body suppressHydrationWarning className={inter.className}>
+        <ClientBody>{children}</ClientBody>
 
-        {/* LocalBusiness Schema */}
+        {/* Structured Data for SEO (moved to body to avoid hydration issues) */}
         <script
           type="application/ld+json"
-          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Dennis Rental Naija",
-              image: "https://dennis-rental-naija.netlify.app/assets/drnlogo.png",
+              image:
+                "https://dennis-rental-naija.netlify.app/assets/drnlogo.png",
               "@id": "https://dennis-rental-naija.netlify.app",
               url: "https://dennis-rental-naija.netlify.app",
               telephone: "+2348037331747",
@@ -62,10 +75,8 @@ export default function RootLayout({
           }}
         />
 
-        {/* FAQ Schema for Voice & SEO */}
         <script
           type="application/ld+json"
-          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -99,8 +110,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
-      <body>{children}</body>
+      </body>
     </html>
   );
 }
