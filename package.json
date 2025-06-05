@@ -10,7 +10,6 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.11.2",
     "bootstrap": "^5.3.6",
     "next": "15.3.3",
     "next-sitemap": "^4.2.3",
