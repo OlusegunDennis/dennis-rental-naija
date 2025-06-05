@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // ✅ Required for static HTML export
+  output: 'export',
   images: {
-    unoptimized: true, // ✅ Required if using <Image> component with 'export'
+    unoptimized: true, // required for static export
   },
-  reactStrictMode: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
