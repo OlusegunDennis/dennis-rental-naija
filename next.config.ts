@@ -1,8 +1,9 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // required for static export
+    unoptimized: true, // Required for static sites on Netlify
   },
 };
 
