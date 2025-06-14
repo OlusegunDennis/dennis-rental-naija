@@ -1,10 +1,9 @@
-// app/layout.tsx
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import ClientBody from '../app/real-estate/ClientBody';
+import BootstrapClient from '../app/BootstrapClient';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,9 +41,12 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className={inter.className}>
+        {/* Ensure client-only JS (tooltips, modals) works */}
+        <BootstrapClient />
+
         <ClientBody>{children}</ClientBody>
 
-        {/* Structured Data for SEO (moved to body to avoid hydration issues) */}
+        {/* LocalBusiness structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,6 +77,7 @@ export default function RootLayout({
           }}
         />
 
+        {/* FAQ structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

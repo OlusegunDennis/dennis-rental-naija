@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 export default function HomePage() {
   const [showBackToTop, setShowBackToTop] = useState(false);
- const [formData, setFormData] = useState({
-  name: '',
-  phone: '',
-  pickupAddress: '',
-  dropoffAddress: '',
-  date: '',
-  time: '',
-  preferredVehicle: '',
-  itinerary: ''
-});
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    pickupAddress: '',
+    dropoffAddress: '',
+    date: '',
+    time: '',
+    preferredVehicle: '',
+    itinerary: ''
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +31,7 @@ export default function HomePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-   const message = `Hello! I'm interested in renting a car.
+    const message = `Hello! I'm interested in renting a car.
 
 Full Name: ${formData.name}
 Phone: ${formData.phone}
@@ -57,77 +57,75 @@ Please contact me with more details.`;
   };
 
   const carListings = [
-  {
-    id: 1,
-    name: '2020 Mercedes G-Wagon',
-    image: '/assets/gwagon2020.jpeg',
-    price: '₦1,000,000/day',
-    description: 'Luxury SUV with a bold design, V8 engine, and premium interior perfect for VIP transport.',
-  },
-  {
-    id: 2,
-    name: 'Rolls Royce Ghost',
-    image: '/assets/royce.jpeg',
-    // price: '₦500,000/day',
-    description: 'Ultra-luxury sedan with a smooth ride, handcrafted interior, and prestige for special occasions.',
-  },
-  {
-    id: 3,
-    name: 'Mercedes Viano Van',
-    image: '/assets/sprinter.jpeg',
-    price: '₦500,000/day',
-    description: 'Spacious and comfortable van ideal for group trips, corporate events, or airport transfers.',
-  },
-  {
-    id: 4,
-    name: '2016 Toyota Highlander',
-    image: '/assets/toyota-highlander.jpeg',
-    price: '₦80,000/day',
-    description: 'Fuel-efficient compact sedan with modern tech and reliability for everyday commuting.',
-  },
-  {
-    id: 5,
-    name: '2020 Toyota Hilux',
-    image: '/assets/hilux-revolution.jpeg',
-    price: '₦50,000/day',
-    description: 'Sporty and stylish compact car offering great performance, comfort, and fuel economy.',
-  },
-  {
-    id: 6,
-    name: '2016 Lexus GX460',
-    image: '/assets/lexus-lx-570.jpeg',
-    price: '₦150,000/day',
-    description: 'Executive sedan with refined styling, luxurious features, and smooth handling.',
-  },
-  {
-    id: 7,
-    name: 'Land Cruiser Prado',
-    image: '/assets/land-cruiser-prado-1.jpeg',
-    price: '₦90,000/day',
-    description: 'Sporty premium sedan with powerful engine options and driver-focused interior.',
-  },
-  {
-    id: 8,
-    name: '2018 Toyota Prado',
-    image: '/assets/prado.jpeg',
-    price: '₦150,000/day',
-    description: 'Spacious and luxurious MPV designed for group travel, offering first-class comfort, advanced safety features, and a smooth ride.',
-  },
-  {
-    id: 9,
-    name: '2012 Toyota Camry',
-    image: '/assets/camry2012.jpeg',
-    price: '₦80,000/day',
-    description: 'Reliable and budget-friendly sedan with spacious interior and proven performance.',
-  },
-  {
-    id: 10,
-    name: '2020 Mercedes Maybach',
-    image: '/assets/maybach.jpeg',
-    // price: '₦600,000/day',
-    description: 'Top-tier chauffeur vehicle with unmatched luxury, advanced tech, and elegant presence.',
-  },
-];
+    {
+      id: 1,
+      name: '2020 Mercedes G-Wagon',
+      image: '/assets/gwagon2020.jpeg',
+      price: '₦1,000,000/day',
+      description: 'Iconic luxury SUV with rugged off-road capability, twin-turbo V8 power, and elite presence — perfect for high-end urban or outdoor adventures.',
+    },
+    {
+      id: 2,
+      name: 'Rolls Royce Ghost',
+      image: '/assets/royce.jpeg',
+      description: 'World-class ultra-luxury sedan known for its silent ride, handcrafted cabin, and unmatched prestige — ideal for weddings and executive events.',
+    },
+    {
+      id: 3,
+      name: 'Mercedes Viano Van',
+      image: '/assets/sprinter.jpeg',
+      price: '₦500,000/day',
+      description: 'Luxury people carrier with ample seating, leather interior, and smooth performance — perfect for group travel or executive transfers.',
+    },
+    {
+      id: 4,
+      name: '2016 Toyota Highlander',
+      image: '/assets/toyota-highlander.jpeg',
+      price: '₦80,000/day',
+      description: 'Mid-size SUV offering reliability, spacious 3-row seating, and fuel efficiency — great for family road trips and daily business runs.',
+    },
+    {
+      id: 5,
+      name: '2020 Toyota Hilux',
+      image: '/assets/hilux-revolution.jpeg',
+      price: '₦50,000/day',
+      description: 'Durable and rugged pickup truck, escourt operations and long distance drives.',
+    },
+    {
+      id: 6,
+      name: '2016 Lexus GX460',
+      image: '/assets/lexus-lx-570.jpeg',
+      price: '₦150,000/day',
+      description: 'Premium luxury SUV built for performance and comfort, with advanced off-road features and plush seating — perfect for VIP travel.',
+    },
+    {
+      id: 7,
+      name: 'Land Cruiser Prado',
+      image: '/assets/land-cruiser-prado-1.jpeg',
+      price: '₦90,000/day',
+      description: 'Legendary full-size SUV known for its endurance, luxury, and 4WD reliability — trusted for both urban and rugged terrain.',
+    },
+    {
+      id: 8,
+      name: '2018 Toyota Prado',
+      image: '/assets/prado.jpeg',
+      price: '₦150,000/day',
+      description: 'Refined and powerful 4x4 SUV designed for comfort and adventure — offers superior handling and robust performance on any terrain.',
+    },
+    {
+      id: 9,
+      name: '2012 Toyota Camry',
+      image: '/assets/camry2012.jpeg',
+      price: '₦80,000/day',
+      description: 'Proven and dependable mid-size sedan with smooth ride, great fuel economy, and comfortable seating — ideal for everyday use.',
+    },
+    {
+      id: 10,
+      name: '2020 Mercedes Maybach',
+      image: '/assets/maybach.jpeg',
+      description: 'Flagship of luxury — handcrafted interior, reclining seats, and advanced tech — for those who desire first-class comfort on the road.',
+    },
+  ];
 
   const handleBookNow = () => {
     const message = "Hello! I'm interested in booking a car. Please provide more details.";
@@ -137,37 +135,13 @@ Please contact me with more details.`;
 
   return (
     <>
-     {/* Navigation */}
-<nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-  <div className="container">
-    <a className="navbar-brand d-flex align-items-center" href="#home">
-      <img src="/assets/drnlogo.png" alt="Dennis Rental Naija" height="40" className="me-2" />
-    </a>
-    {/* ...rest of your navbar items (toggle, nav-links, etc.) */}
-
-
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span className="navbar-toggler-icon"></span>
-</button>
-<div className="collapse navbar-collapse" id="navbarNav">
-  <ul className="navbar-nav ms-auto">
-    <li className="nav-item">
-      <Link className="nav-link" href="#home">Home</Link>
-    </li>
-    <li className="nav-item">
-      <Link className="nav-link" href="#cars">Cars</Link>
-    </li>
-    <li className="nav-item">
-      <Link className="nav-link" href="#contact">Contact</Link>
-    </li>
-    <li className="nav-item">
-      <Link className="nav-link" href="#about">About</Link>
-    </li>
-    <li className="nav-item">
-      <Link className="nav-link" href="/real-estate">Real Estate</Link>
-              </li>
-            </ul>
-          </div>
+      Navigation
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div className="container">
+          <a className="navbar-brand d-flex align-items-center" href="#home">
+            <img src="/assets/drnlogo.png" alt="Dennis Rental Naija" height="40" className="me-2" />
+          </a>
+          {/* ...rest of your navbar items (toggle, nav-links, etc.) */}
         </div>
       </nav>
 
@@ -177,8 +151,7 @@ Please contact me with more details.`;
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-6">
               <h1 className="display-4 fw-bold mb-4 animate-heading nigeria-text">
-  Dennis Rental Naija
-
+                Dennis Rental Naija
               </h1>
               <p className="lead mb-5 fade-in-up">
                 Your trusted partner for premium car rentals and quality real estate services in Lagos, Nigeria.
@@ -196,7 +169,7 @@ Please contact me with more details.`;
               </div>
             </div>
             <div className="col-lg-6 text-center">
-              <img src="/assets/drnlogo2.png" alt="Dennis Rental Naija" className="img-fluid" style={{maxHeight: '400px'}} />
+              <img src="/assets/drnlogo2.png" alt="Dennis Rental Naija" className="img-fluid" style={{ maxHeight: '400px' }} />
             </div>
           </div>
         </div>
@@ -219,21 +192,21 @@ Please contact me with more details.`;
                     src={car.image}
                     className="card-img-top"
                     alt={car.name}
-                    style={{height: '250px', objectFit: 'cover'}}
+                    style={{ height: '250px', objectFit: 'cover' }}
                     onError={(e) => {
                       e.currentTarget.src = `https://via.placeholder.com/400x250/007bff/white?text=${car.name}`;
                     }}
                   />
-                 <div className="card-body d-flex flex-column">
-  <h5 className="card-title">{car.name}</h5>
-  <p className="card-text text-muted">{car.description}</p>
-  <p className="fw-bold text-success mb-2">{car.price}</p>
-  <button
-    className="btn btn-whatsapp mt-auto"
-    onClick={handleBookNow}
-  >
-    <i className="fab fa-whatsapp me-2"></i>
-    Book Now
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">{car.name}</h5>
+                    <p className="card-text text-muted">{car.description}</p>
+                    <p className="fw-bold text-success mb-2">{car.price}</p>
+                    <button
+                      className="btn btn-whatsapp mt-auto"
+                      onClick={handleBookNow}
+                    >
+                      <i className="fab fa-whatsapp me-2"></i>
+                      Book Now
                     </button>
                   </div>
                 </div>
@@ -257,120 +230,120 @@ Please contact me with more details.`;
               <div className="contact-form">
                 <h4 className="mb-4">Send us a message</h4>
                 <form onSubmit={handleSubmit}>
-  <div className="mb-3">
-    <label htmlFor="name" className="form-label">Full Name</label>
-    <input
-      type="text"
-      className="form-control"
-      id="name"
-      name="name"
-      value={formData.name}
-      onChange={handleInputChange}
-      placeholder="Enter your full name"
-      required
-    />
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
 
-  <div className="mb-3">
-    <label htmlFor="phone" className="form-label">Phone Number</label>
-    <input
-      type="tel"
-      className="form-control"
-      id="phone"
-      name="phone"
-      value={formData.phone}
-      onChange={handleInputChange}
-      placeholder="Enter your phone number"
-      required
-    />
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="phone" className="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      className="form-control"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
 
-  <div className="mb-3">
-    <label htmlFor="pickupAddress" className="form-label">Pick-up Address</label>
-    <input
-      type="text"
-      className="form-control"
-      id="pickupAddress"
-      name="pickupAddress"
-      value={formData.pickupAddress}
-      onChange={handleInputChange}
-      placeholder="Where should we pick you up?"
-      required
-    />
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="pickupAddress" className="form-label">Pick-up Address</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="pickupAddress"
+                      name="pickupAddress"
+                      value={formData.pickupAddress}
+                      onChange={handleInputChange}
+                      placeholder="Where should we pick you up?"
+                      required
+                    />
+                  </div>
 
-  <div className="mb-3">
-    <label htmlFor="dropoffAddress" className="form-label">Drop-off Address</label>
-    <input
-      type="text"
-      className="form-control"
-      id="dropoffAddress"
-      name="dropoffAddress"
-      value={formData.dropoffAddress}
-      onChange={handleInputChange}
-      placeholder="Where are you going?"
-      required
-    />
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="dropoffAddress" className="form-label">Drop-off Address</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="dropoffAddress"
+                      name="dropoffAddress"
+                      value={formData.dropoffAddress}
+                      onChange={handleInputChange}
+                      placeholder="Where are you going?"
+                      required
+                    />
+                  </div>
 
-  <div className="row">
-    <div className="col-md-6 mb-3">
-      <label htmlFor="date" className="form-label">Date</label>
-      <input
-        type="date"
-        className="form-control"
-        id="date"
-        name="date"
-        value={formData.date}
-        onChange={handleInputChange}
-        required
-      />
-    </div>
-    <div className="col-md-6 mb-3">
-      <label htmlFor="time" className="form-label">Time</label>
-      <input
-        type="time"
-        className="form-control"
-        id="time"
-        name="time"
-        value={formData.time}
-        onChange={handleInputChange}
-        required
-      />
-    </div>
-  </div>
+                  <div className="row">
+                    <div className="col-md-6 mb-3">
+                      <label htmlFor="date" className="form-label">Date</label>
+                      <input
+                        type="date"
+                        className="form-control"
+                        id="date"
+                        name="date"
+                        value={formData.date}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="col-md-6 mb-3">
+                      <label htmlFor="time" className="form-label">Time</label>
+                      <input
+                        type="time"
+                        className="form-control"
+                        id="time"
+                        name="time"
+                        value={formData.time}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
 
-  <div className="mb-3">
-    <label htmlFor="preferredVehicle" className="form-label">Preferred Vehicle</label>
-    <input
-      type="text"
-      className="form-control"
-      id="preferredVehicle"
-      name="preferredVehicle"
-      value={formData.preferredVehicle}
-      onChange={handleInputChange}
-      placeholder="e.g. 2020 Mercedes Gwagon"
-      required
-    />
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="preferredVehicle" className="form-label">Preferred Vehicle</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="preferredVehicle"
+                      name="preferredVehicle"
+                      value={formData.preferredVehicle}
+                      onChange={handleInputChange}
+                      placeholder="e.g. 2020 Mercedes Gwagon"
+                      required
+                    />
+                  </div>
 
-  <div className="mb-3">
-    <label htmlFor="itinerary" className="form-label">Itinerary</label>
-    <textarea
-      className="form-control"
-      id="itinerary"
-      name="itinerary"
-      rows={3}
-      value={formData.itinerary}
-      onChange={handleInputChange}
-      placeholder="Tell us about your travel plan"
-      required
-    ></textarea>
-  </div>
+                  <div className="mb-3">
+                    <label htmlFor="itinerary" className="form-label">Itinerary</label>
+                    <textarea
+                      className="form-control"
+                      id="itinerary"
+                      name="itinerary"
+                      rows={3}
+                      value={formData.itinerary}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your travel plan"
+                      required
+                    ></textarea>
+                  </div>
 
-  <button type="submit" className="btn btn-whatsapp btn-lg w-100">
-    <i className="fab fa-whatsapp me-2"></i>
-    Send via WhatsApp
+                  <button type="submit" className="btn btn-whatsapp btn-lg w-100">
+                    <i className="fab fa-whatsapp me-2"></i>
+                    Send via WhatsApp
                   </button>
                 </form>
               </div>
@@ -451,7 +424,7 @@ Please contact me with more details.`;
         </div>
       </section>
 
-      {/* Footer */}
+ {/* Footer */}
       <footer className="footer">
         <div className="container">
           <div className="row">
@@ -468,6 +441,7 @@ Please contact me with more details.`;
                 <a href="https://instagram.com/dennis_properties_naija" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-instagram me-2"></i>@dennis_properties_naija
                 </a>
+                <a></a>
               </div>
             </div>
             <div className="col-lg-4 mb-4">
@@ -478,7 +452,7 @@ Please contact me with more details.`;
               </p>
               <p>
                 <i className="fas fa-map-marker-alt me-2"></i>
-                Office 4, Owoduni Street, Onipanu Bus Stop, Lagos State, Nigeria
+                Office G. Cappa Estate, Ikeja, Lagos State, Nigeria
               </p>
             </div>
           </div>
