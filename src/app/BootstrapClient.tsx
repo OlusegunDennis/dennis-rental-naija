@@ -4,7 +4,11 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    bootstrap: any;
+    bootstrap: {
+      Tooltip: new (element: Element) => {
+        dispose?: () => void;
+      };
+    };
   }
 }
 
